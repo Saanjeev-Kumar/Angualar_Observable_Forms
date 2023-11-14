@@ -1,0 +1,11 @@
+<p>header works! with headerComponent, Content2Componet, Content3Componet,Content1Componet, ChildComponet, profile Component</p>
+
+<div class="header">
+    <p>nav bar</p>
+    <!-- <a (click)="btnClick()">Content1</a>  Binding the Router link to required path-->
+    <a [routerLink]="'content1'">Content1</a>
+    <!-- <a (click)="btnClick(1)">Content2</a> Or we can manipulate the url using nagivate method in router class-->
+    <button (click)="btnClick()">Content2</button>
+    <!-- <a>Content2</a> -->
+    <a [routerLink]="'content3'">Content3</a>
+</div>
