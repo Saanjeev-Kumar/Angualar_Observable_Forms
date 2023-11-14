@@ -1,0 +1,45 @@
+<p>template-driven forms works!</p>
+<div class="row">
+    <div class="col-sm-10 col-md-8 offset-sm-1 offset-md-2"><!---BOOTSTRAP GRID SYSTEM ROWS AND C0LUMNS-->
+    <div class="card">
+        <div class="card-header">
+            <h3 class="text-center">Login Form</h3>
+        </div>
+        <div class="card-body">
+            <!-- Template driven form is ngForm ... Created A local vvariable element #f for the ngForm so that can be stored on f-->
+            <form #f="ngForm"> 
+                <!-- Username -->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="uname">Username : </label>
+                        </div>
+                        <div class="col-8">
+                            <input type="email" name="uname" class=" form-control" required email ngModel>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Password -->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="password">Password : </label>
+                        </div>
+                        <div class="col-8">
+                            <input type="password" name="password" class=" form-control" required minlength="6" ngModel/>
+                        </div>
+                    </div>
+                </div>
+                <!-- Buttton -->
+                <div class="form-group">
+                    <button class="btn btn-secondary" [disabled] ="f.invalid" (click)= "onSubmit(f)">SUBMIT</button>
+                </div>
+                <!-- With ngForm we can check the form state -->
+                <!-- Form State : {{f.invalid}} || {{f.errors}} -->
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<hr>
